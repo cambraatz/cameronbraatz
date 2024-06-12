@@ -1,0 +1,21 @@
+export const Abasin = require('./a_basin.jpg');
+export const Breck1 = require('./Breck1.jpg');
+export const ChasmLake = require('./ChasmLake.jpg');
+export const Moss = require('./Moss.jpg');
+export const Dunes1 = require('./Dunes1.jpg');
+export const MtParn1 = require('./MtParn1.jpg');
+export const PineTree = require('./PineTree.jpg');
+export const Sangre1 = require('./Sangre1.jpg');
+export const Sangre2 = require('./Sangre2.jpg');
+export const Vert1 = require('./Vert1.jpg');
+export const Wisco1 = require('./Wisco1.jpg');
+export const Forest1 = require('./Forest1.jpg');
+export const TwinLakes1 = require('./TwinLakes1.jpg');
+/* Integration Progress... */
+export const Dunes2 = require('./Dunes2.jpg');
+export const NCARHike = require('./NCARHike.jpg');
+export const Dunes3 = require('./Dunes3.jpg');
+export const Dunes4 = require('./Dunes4.jpg');
+export const Dunes5 = require('./Dunes5.jpg');
+export const ChicagoLakes = require('./ChicagoLakes.jpg');
+export const IndianPaintbrush = require('./IndianPaintbrush.jpg');
