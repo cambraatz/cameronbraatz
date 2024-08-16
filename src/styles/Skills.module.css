@@ -1,0 +1,85 @@
+.skills {
+    width: 100%;
+    height: auto;
+    font-family: Inter, sans-serif;
+    color: #263632;
+  }
+  
+.skills .blueBackground {
+    background-color: #CBDCF4;
+    box-shadow: 0 5px 5px rgba(37, 36, 36, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.skills .whiteBackground {
+    box-shadow: 0 5px 5px rgba(37, 36, 36, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: end;
+    padding: 20px 20px;
+}
+
+.skills .greenBackground {
+    background-color: #9FA69A;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.skills .contentWrapper h3 {
+    margin-block: 0 0.5em;
+}
+
+.skills .contentWrapper h5 {
+    margin-block: 0;
+}
+
+.skills .contentWrapper p {
+    margin-block: 0.5em 0;
+    line-height: 1.5em;
+    font-size: smaller;
+}
+
+.skills .blueBackground section div div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.skills .whiteBackground div div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+@media screen and (min-width: 500px) {
+    .skills {
+        display: flex;
+        justify-content: space-between;
+        background-color: #FFF;
+    }
+
+    .skills .blueBackground,
+    .skills .whiteBackground,
+    .skills .greenBackground {
+        display: flex;
+        width: 30%;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: flex-start;
+        box-shadow: none;
+        background-color: #FFF;
+        color:#263632;
+        padding: 3% 3% 5% 3%;
+    }
+    .skills .whiteBackground {
+        margin-block: 0 0;
+        text-align: start;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+}

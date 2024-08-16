@@ -1,0 +1,26 @@
+.banner {
+    margin-block: 75px 0;
+    display: flex;
+    width: 100%;
+    height: auto;
+    max-height: 750px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+@media screen and (min-width: 1650px) {
+    .banner {
+        max-height: 1000px;
+    }
+
+    .banner img {
+        object-fit: cover;
+        object-position: 0 80%;
+    }
+}

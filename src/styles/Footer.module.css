@@ -1,0 +1,63 @@
+.banner {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.banner header {
+    text-align: end;
+}
+
+.banner header:hover {
+    color: #CBDCF4;
+}
+
+.announcement {
+    background-color: rgba(159, 166, 154, 1);
+    min-height: 25px;
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 10px 40px;
+    font: 700 10px/18px Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.iconContainer {
+    display: flex;
+    padding: 10px 40px;
+}
+
+.iconWrapper {
+    background-color: #fff;
+    display: flex;
+    height: 35px;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 20px;
+}
+
+.lastIcon {
+    composes: icon;
+    align-self: start;
+    margin-top: 7px;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: #CBDCF4;
+}
+a:active {
+    color: darkorchid;
+}
