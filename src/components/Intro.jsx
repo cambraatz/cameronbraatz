@@ -15,7 +15,10 @@ const IntroSection = () => {
             <div className={styles.contentWrapper}>
                 <h3 className={styles.greeting}>hi!</h3>
                 <p className={styles.description}>
-                    i'm a software engineer and landscape designer with over 6+ years of professional design, development and management experience
+                    my name is cameron braatz
+                </p>
+                <p className={styles.description}>
+                    i'm a software engineer and landscape designer with 6+ years of professional design, development and management experience
                 </p>
                 <p className={styles.location}>
                     denver, co

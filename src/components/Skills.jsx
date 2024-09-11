@@ -19,7 +19,7 @@ const Skills = () => {
                     sql + nosql database management<br/>
                     apache web server implementation<br/>
                     linux server management + processes<br/>
-                    python, c++, scala, javascript, html, css<br/>
+                    python, c++, c#, scala, javascript, html, css<br/>
                     react, .net, django, flask<br/>
                     figma, adobe creative suite, sketchup, lumion<br/>
                 </p>
@@ -29,19 +29,17 @@ const Skills = () => {
             <div className={styles.contentWrapper}>
                 <h5 className={styles.description}>landscape architecture</h5>
                 <p className={styles.list}>
-                    full-stack software development<br/>
-                    application design + development<br/>
-                    website design + development<br/>
-                    algorithms + algorithmic strategies<br/>
-                    data structures + data representation<br/>
-                    data analysis + information visualization<br/>
-                    artificial intelligence algorithms<br/>
-                    sql + nosql database management<br/>
-                    apache web server implementation<br/>
-                    linux server management + processes<br/>
-                    python, c++, scala, javascript, html, css<br/>
-                    react, .net, django, flask<br/>
-                    figma, adobe creative suite, sketchup, lumion<br/>
+                    ornamental planting design<br/>
+                    single family residential design<br/>
+                    multifamily residential + amenity design<br/>
+                    construction details + documentation<br/>
+                    public park + trail design<br/>
+                    corporate + academic campus design<br/>
+                    hand + digital presentation graphics<br/>
+                    general site survey + analysis<br/>
+                    construction management + administration<br/>
+                    productive garden design<br/>
+                    project management + budgeting<br/>
                 </p>
             </div>
         </div>

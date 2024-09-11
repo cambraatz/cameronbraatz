@@ -1,8 +1,11 @@
-import {React,useState} from 'react';
+import { React,useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import styles from '../styles/Header.module.css';
 import MenuLogo from '../assets/menu_logo.svg';
 
-const HeaderNew = () => {
+const Header = () => {
+    const navigate = useNavigate();
     const [expand,setExpand] = useState(false)
 
     
@@ -40,40 +43,66 @@ const HeaderNew = () => {
     };
 
     const handleMenuClick = (e) => {
-        console.log(`Implement navigate to: /${e.target.id}`);
+        //console.log(`Implement navigate to: /${e.target.id}`);
+        switch(e.target.id){
+            case "comp_sci":
+                navigate('/compsci/0');
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
+                break;
+            case "landscape":
+                navigate('/landscape/0');
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
+                break;
+            case "hobbies":
+                navigate('/hobbies');
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
+                break;
+            case "home":
+                navigate('/');
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
+                break;
+            default:
+                break;
+        }
+        
     };
 
+    const handleHomeClick = (e) => {
+        navigate('/')
+    }
+
     return (
-        <>
-        <div id="menu_popup" className={styles.popup} onClick={handleMenuClick}>
-            <div id="comp_sci" className={styles.menuItem}>
-                <p>computer science</p>
+        <header>
+            <div id="menu_popup" className={styles.popup} onClick={handleMenuClick}>
+                    <div id="comp_sci" className={styles.menuItem}>
+                        <p>computer science</p>
+                    </div>
+                    <div id="landscape" className={styles.menuItem}>
+                        <p>landscape arch</p>
+                    </div>
+                    <div id="hobbies" className={styles.menuItem}>
+                        <p>hobbies</p>
+                    </div>
+                    <div id="home" className={styles.menuItem}>
+                        <p>back to home</p>
+                    </div>
+                </div>
+            <div className={styles.header}>
+                <div id="click_header" className={styles.container}>
+                    <h2 onClick={handleHomeClick}>cameron braatz</h2>
+                    <img 
+                        src={MenuLogo}
+                        alt=""
+                        id="menu_icon"
+                        className={styles.icon}           
+                        loading="lazy"
+                        onClick={handleClick}
+                    />
+                </div>
             </div>
-            <div id="landscape" className={styles.menuItem}>
-                <p id>landscape arch</p>
-            </div>
-            <div id="photography" className={styles.menuItem}>
-                <p>photography</p>
-            </div>
-            <div id="artwork" className={styles.menuItem}>
-                <p>artwork</p>
-            </div>
-        </div>
-        <header id="click_header" className={styles.header}>
-            <div className={styles.container}>
-                <h2>cameron braatz</h2>
-                <img 
-                    src={MenuLogo}
-                    alt=""
-                    id="menu_icon"
-                    className={styles.icon}           
-                    loading="lazy"
-                    onClick={handleClick}
-                />
-            </div>
+            
         </header>
-        </>
     );
 };
 
-export default HeaderNew;
+export default Header;

@@ -1,0 +1,138 @@
+.row {
+    margin: 0 5% 4%;
+    display: flex;
+    flex-direction: row;
+    height: 175px;
+    width: 100%;
+    gap: 4%;
+}
+
+.row img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.fullframe {
+    width: 90%;
+}
+
+.fullframe img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.double {
+    width: 90%;
+}
+
+.double img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.doublerow {
+    margin: 0 5% 4%;
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    width: 100%;
+    gap: 4%;
+}
+
+.doublerow img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.tallrow {
+    margin: 0 5% 4%;
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+    width: 100%;
+    gap: 4%;
+}
+.tallrow img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.tall {
+    height: 100%;
+    width: 43%;
+}
+.short {
+    height: 100%;
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    overflow: hidden;
+}
+
+.frame1 {
+    height: 100%;
+    width: 28%;
+    overflow: hidden;
+}
+.frame3 {
+    height: 100%;
+    width: 58%;
+    overflow: hidden;
+}
+
+.banner {
+    margin-block: 0 0;
+    display: flex;
+    width: 100%;
+    height: auto;
+    max-height: 750px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    max-height: 70%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+#photogrid {
+    margin-top: 10%;
+}
+
+
+@media screen and (min-width: 500px){
+    .row {
+        height: 600px;
+    }
+
+    .doublerow {
+        height: 1000px;
+    }
+
+    #photogrid {
+        margin-top: 5%;
+    }
+}
+
+@media screen and (min-width: 1650px) {
+    .banner {
+        max-height: 1000px;
+    }
+
+    .banner img {
+        object-fit: cover;
+        object-position: 0 80%;
+    }
+}

@@ -2,7 +2,7 @@
     padding: 2.5%;
     display: flex;
     justify-content: center;
-    height: 15em;
+    height: 17em;
     gap: 2%;
 }
 
@@ -12,6 +12,7 @@
     background-color: #9FA69A;
     border-radius: 0 0 10px 10px;
     width: 100%;
+    transition: all 1s ease-in-out;
 }
 
 .carousel h5 {
@@ -53,10 +54,10 @@
 
 @media screen and (min-width: 500px) {
     .carousel {
-        height: 30em;
+        height: 40em;
     }
     .carousel img {
-        height: 30em;
+        height: 40em;
         overflow: hidden;
     }
 }
