@@ -18,10 +18,10 @@ const IntroSection = () => {
                     my name is cameron braatz
                 </p>
                 <p className={styles.description}>
-                    i'm a software engineer and landscape designer with 6+ years of professional design, development and management experience
+                    i'm a denver-based software engineer and landscape designer with over 6 years of professional design, development and management experience
                 </p>
                 <p className={styles.location}>
-                    denver, co
+                    this page serves as a collection of work from my professional + academic projects over my career
                 </p>
             </div>
         </div>

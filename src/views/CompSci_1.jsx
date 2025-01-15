@@ -9,6 +9,8 @@ import Fig0 from '../assets/RvOApp_1.png';
 import Fig1 from '../assets/RvOApp_2.png';
 import Fig2 from '../assets/RvOApp_3.png';
 import Fig3 from '../assets/RvOApp_6.png';
+import Fig4 from '../assets/RvOApp_Update0.png';
+import Fig5 from '../assets/RvOApp_Update2.png';
 
 import styles from '../styles/Portfolio.module.css';
 
@@ -18,7 +20,7 @@ const DM0_params = {
     color: "#fffff",
     body1: "this application was developed in collaboration with my brother, a real estate investor, who had developed the original algorithm template using ms excel. our intent was to repurpose the core logic into a user friendly application for use by the general population. the project also served as an exercise in establishing api's and database management.",
     body2: "development began with a thorough analysis of the excel formulas, variables, and structure. leveraging the django development framework facilitated the communication between the react frontend and the python based backend. the data science libraries numpy and pandas were used to replicate the original excel functions behind the curtains, while a rich user interface built using the materialui library of component templates makes the process approachable.",
-    body3: "users of this application are able to compare their current/potential rental situation with the anticipated costs of home ownership. basic assumptions are made on many of the variables to make the application approachable for the average user, such as interest rates, maintenance costs, hoa fees, etc. advanced users are able to expand the investment specifics to further hone in on their anticipated returns.",
+    body3: "users of this application are able to compare their current/potential rental situation with the anticipated costs of home ownership. basic assumptions are made on many of the variables to make the application approachable for the average user, such as interest rates, maintenance costs, hoa fees, etc. advanced users are able to expand the investment specifics to further hone in on their anticipated returns.\n NOTE: this project is actively receiving a face lift, see the end of the page for updates and come back soon to see the redesign!",
     figure1: null,
     figure2: null,
     alt: null,
@@ -64,14 +66,40 @@ const DM4_params = {
     header: null,
     subheader: "cash flows",
     color: "white",
-    body1: "the owner payment summary from the previous section is a by-product of the long form analysis process. in quantifying the financial forecast, monthly and annual cash flows are derived for the extent of the holding period in order to determine the final return on investment. rather than simply discarding this information, it is presented in a styled html table to allow focused inspection.",
-    body2: "the python logic iteratively calculates each variable for each unit of time and assigns the result to a list. once complete, a script runs through each respective list, printing its values into a raw html text that is returned and placed into the react frontend for rendering and subsequent css styling.",
-    body3: "due to the wide breadth of metrics, hovering over the table will highlight particular rows in the table for ease of reading. additionally, as the length of the holding period grows, so too do the tables. overflow situations will introduce a scroll bar to ensure proper formatting without losing information.",
+    body1: "in the process of predicting the long term financial forecast, monthly and annual cash flows are generated for the extent of the holding period. rather than simply discarding this information, it is presented in a styled html table to allow focused inspection.",
+    body2: "the python algorithm calculates the values for each variable during the extent of the study period, logging the results as a series of lists. once complete, a script runs through each respective list, printing its values into a raw html text that is returned to the react frontend for rendering.",
+    body3: null,
     figure1: Fig3,
     figure2: null,
     alt: "delivery manager figure 1.3",
     caption: "responsive design"
 };
+const DM5_params = {
+    header: "on the boards",
+    subheader: "v1.1",
+    color: "white",
+    body1: "originally developed as an introduction to application development, the intention was always to return and redevelop the application before deployment.",
+    body2: "this next iteration focuses development on simplifying user inputs and outputs and streamlining the overall ux/ui experience.",
+    body3: null,
+    figure1: Fig4,
+    figure2: null,
+    alt: "delivery manager figure 1.3",
+    caption: "responsive design"
+};
+const DM6_params = {
+    header: null,
+    subheader: "updates",
+    color: "white",
+    body1: "on revisiting the app, i decided to replace the django backend for one using .net core. in my experience, the integration with the react frontend was much smoother using the latter.",
+    body2: "this version collects user input on the client machine packages it and sends it to the server to run the core Python logic. Come back to soon to see the implementation and info viz updates!",
+    body3: null,
+    figure1: Fig5,
+    figure2: null,
+    alt: "delivery manager figure 1.3",
+    caption: "responsive design"
+};
+
+const NOTE = "NOTE: this project is actively receiving a face lift, see the end of the page for updates and come back soon to see the redesign!";
 
 const CompSci_1 = () => {
     return (
@@ -80,12 +108,15 @@ const CompSci_1 = () => {
             <span className="buffer"></span>
             <LinksArray page="compsci" />
             <PortfolioEntry params={DM0_params}/>
+            <p id={styles.note}>{NOTE}</p>
             <PortfolioEntry params={DM1_params}/>
             <PortfolioEntry params={DM2_params}/>
             <PortfolioEntry params={DM3_params}/>
             <PortfolioEntry params={DM4_params}/>
+            <PortfolioEntry params={DM5_params}/>
+            <PortfolioEntry params={DM6_params}/>
             <span className="half_buffer"></span>
-            <Footer page="/compsci/1" dest="delivery scanner"/>
+            <Footer page="/compsci/2" dest="delivery scanner"/>
         </>
     );
 };

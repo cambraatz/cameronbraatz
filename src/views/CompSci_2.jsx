@@ -46,7 +46,7 @@ const CompSci_2 = () => {
             <PortfolioEntry id={styles.ds1} params={DM1_params} shadow={false} scroll={true}/>
             <PortfolioEntry id={styles.ds2} params={DM2_params} shadow={false} scroll={true}/>
             <span className="half_buffer"></span>
-            <Footer page="/compsci/2" dest={null}/>
+            <Footer page="/compsci/3" dest={null}/>
         </>
     );
 };

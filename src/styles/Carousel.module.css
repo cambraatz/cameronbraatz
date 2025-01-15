@@ -12,7 +12,7 @@
     background-color: #9FA69A;
     border-radius: 0 0 10px 10px;
     width: 100%;
-    transition: all 1s ease-in-out;
+    
 }
 
 .carousel h5 {
@@ -27,6 +27,7 @@
     width: auto;
     height: 15em;
     border-radius: 10px 10px 0 0;
+    
 }
 
 .carousel figure {
@@ -38,6 +39,12 @@
     height: auto;
     box-shadow: 1px 5px 5px rgba(37, 36, 36, 0.1);
     border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.carousel figure:hover {
+    box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.1),
+                1px 5px 5px rgba(37, 36, 36, 0.1);
 }
 
 .carousel .overlay {

@@ -52,6 +52,10 @@ const Footer = (props) => {
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case "/compsci/2":
+                navigate("/compsci/3");
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
+                break;
+            case "/compsci/3":
                 navigate("/");
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
@@ -64,8 +68,8 @@ const Footer = (props) => {
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case "/landscape/2":
-                navigate("/")
-                //navigate("/landscape/3")
+                //navigate("/")
+                navigate("/landscape/3")
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case "/landscape/3":
@@ -93,7 +97,7 @@ const Footer = (props) => {
             <div className={styles.iconContainer}>
                 <div className={styles.iconWrapper}>
                     {icons.map((icon, index) => (
-                        <a href={icon.url} target="_blank" rel="noreferrer noopener"><Icon key={index} id={icon.alt} src={icon.src} alt={icon.alt} className={styles.icon}/></a>
+                        <a href={icon.url} target="_blank" rel="noreferrer noopener" key={index}><Icon id={icon.alt} src={icon.src} alt={icon.alt} className={styles.icon}/></a>
                     ))}
                 </div>
                 <a href="mailto:cameronbraatz@gmail.com" target="_blank" rel="noreferrer noopener"><Icon src={Gmail} alt="Last Icon" className={styles.lastIcon}/></a>

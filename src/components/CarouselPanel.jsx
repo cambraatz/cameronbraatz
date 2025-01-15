@@ -11,8 +11,10 @@ const CarouselPanel = ({ src, alt, verbose, count }) => {
         //document.getElementById(elmt).style.transform = "scale(2,0)";
     };
 
+    const ident = "panel" + count;
+
     return (
-        <figure id={"panel" + count} className={styles.figure}>
+        <figure id={ident} className={styles.figure}>
             <img loading="lazy" src={src} alt={alt} className={styles.carouselImage} />
             <div>
                 <h5>{alt}</h5>

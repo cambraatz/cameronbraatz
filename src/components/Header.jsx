@@ -7,7 +7,6 @@ import MenuLogo from '../assets/menu_logo.svg';
 const Header = () => {
     const navigate = useNavigate();
     const [expand,setExpand] = useState(false)
-
     
     var isPointerEventInsideElement = function (event, element) {
         var pos = {
@@ -26,9 +25,7 @@ const Header = () => {
             document.getElementById("menu_popup").style.display = "none";
             setExpand(false);
         } 
-    });
-    
-    
+    });    
 
     const handleClick = (e) => {
         if(!expand){

@@ -13,11 +13,14 @@ const LinksArray = (props) => {
             case "deliverymanager":
                 navigate("/compsci/0");
                 break;
-            case "renttoown":
+            case "landcover":
                 navigate("/compsci/1");
                 break;
-            case "deliveryscanner":
+            case "renttoown":
                 navigate("/compsci/2");
+                break;
+            case "deliveryscanner":
+                navigate("/compsci/3");
                 break;
             case "multifamily":
                 navigate("/landscape/0");
@@ -27,6 +30,12 @@ const LinksArray = (props) => {
                 break;
             case "modernresidential":
                 navigate("/landscape/2");
+                break;
+            case "regionalanalysis":
+                navigate("/landscape/3");
+                break;
+            case "capstone":
+                navigate("/landscape/4");
                 break;
             /*case "mountainmodern":
                 navigate("/landscape/3");
@@ -44,6 +53,7 @@ const LinksArray = (props) => {
             <div className={styles.links} onClick={handleClick}>
                 <h3>projects:</h3>
                 <h5 id="deliverymanager">{`>>>`} delivery manager</h5>
+                <h5 id="landcover">{'>>>'} land cover segmentation</h5>
                 <h5 id="renttoown">{'>>>'} rent to own calculator</h5>
                 <h5 id="deliveryscanner">{'>>>'} delivery scanner</h5>
             </div>
@@ -56,6 +66,8 @@ const LinksArray = (props) => {
                 <h5 id="multifamily">{`>>>`} multi family residential</h5>
                 <h5 id="regionalpark">{`>>>`} regional park concepts</h5>
                 <h5 id="modernresidential">{`>>>`} modern residential</h5>
+                <h5 id="regionalanalysis">{`>>>`} dane county trails</h5>
+                <h5 id="capstone">{`>>>`} chouteaus landing</h5>
                 {/*<h5 id="mountainmodern">{`>>>`} mountain modern</h5>
                 <h5 id="corporatecampus">{'>>>'} corporate campus design</h5>
                 <h5 id="masterplanning">{`>>>`} master planning</h5> */}

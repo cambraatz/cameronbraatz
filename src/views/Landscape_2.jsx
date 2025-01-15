@@ -149,7 +149,7 @@ const Landscape_2 = () => {
             {/* <PortfolioEntry id={styles.mr11} params={render3_params}/> */}         
 
             <span className="half_buffer"></span>
-            <Footer page="/landscape/2" dest={null} /*dest="mountain modern"*/ />
+            <Footer page="/landscape/2" dest="dane county trails" /*dest="mountain modern"*/ />
         </>
     );
 };

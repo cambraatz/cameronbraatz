@@ -83,7 +83,7 @@
     height: auto;
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);*/
 }
 .noshadow {
     width: 100%;
@@ -102,6 +102,16 @@
     width: 200%;
 }
 
+#note {
+    margin: 5% 5% 0;
+    width: 90%;
+    font-size: small;
+}
+
+#lc8 img, #lc6 img {
+    border-radius: 0;
+}
+
 /* Tablet and Desktop Styling */
 @media screen and (min-width: 500px){
     /*
@@ -115,6 +125,10 @@
         padding-top: 10%;
     }
     */
+
+    #note {
+        width: 50%;
+    }
 
     .module0 {
         flex-direction: row;
@@ -233,5 +247,9 @@
         width: 100%;*/
         max-width: 100%;
         max-height: 100%;
+    }
+
+    #lc9 .imgBlock, #ip0 .imgBlock {
+        display: block;
     }
 }
