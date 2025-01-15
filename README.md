@@ -68,3 +68,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# cameronbraatz.com
+This repository holds the code for my personal portfolio website. This simple website was developed using solely React. The simple nature of the portfolio page negated the need to develop a backend or anything more in depth than the React frontend.
+
+The site is a living collection of my personal, professional and academic work across several fields. Particularly, one can find my Comp Sci work summarized here, landscape architecture work samples and artwork I have created over the years. Feel free to go see for yourself!
+
+## Computer Science
+In 2022, I began studying Computer Science at CU-Boulder, pursuing a post-baccalaureate degree while continuing to work full-time as a landscape architect. This website highlights some of my more visual projects, while other <i>less flashy</i> project work can be found throughout my GitHub page.
+
+In September of 2023 I left my job to focus on school, while contracting as web integration consultant/web developer. I will be graduating in December of 2024.
+
+## Landscape Architecture
+In 2018, I graduated from UW-Madison with a bachelors of science in Landscape Architecture. Immediately after graduating, I moved out to Denver, Colorado to start my professional career.
+
+Fast forward to the present and I have over 6 years of professional landscape architecture experience spanning scales from small high-end residential work to large-scale master planned communities. Some of my favorite professional and academic projects can be found on the site, if you are curious to see more please reach out!
+
+## Art and Photography
+I have been practicing photography for over 10 years using DSLR cameras, but have recently been playing around with film photography as well. The site exhibits some of my personal work over that time.
+
+While pursuing landscape architecture at UW-Madison, I earned a certificate (UW's equivalent to a minor) in studio art. My focus was on 3D sculpture, particularly focusing on the mediums of glass and wood. I fabricated wood furniture and art, blew glass sculptures in the hot shop and bent numerous neon signs as part of the curriculum.
+
+While I have not practiced much recently due to a lack of access, I fully hope to establish these practices once again once I have the means to. Stay tuned!
+
+Note: node_modules and build directories have been omitted from this repository. 
