@@ -12,6 +12,8 @@
 /build
 /src/assets
 build.zip
+/src/components/old
+/src/views/old
 
 # misc
 .DS_Store
