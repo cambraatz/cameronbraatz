@@ -139,8 +139,6 @@ const render2_params = {
     caption: "user validation and landing page"
 };
 
-
-
 const Landscape_0 = () => {
     return (
         <>
@@ -149,8 +147,6 @@ const Landscape_0 = () => {
             <LinksArray page="landscape" />
             <PortfolioEntry id={styles.ip0} params={intro_params} shadow={false}/>
             <PortfolioEntry id={styles.ip1} params={inspo0_params} shadow={false} scroll={true}/>
-            {/* <PortfolioEntry params={inspo1_params}/> */}
-
             <PortfolioEntry id={styles.wp0} params={wp0_params} shadow={false}/>
             {/*
             <PortfolioEntry id={styles.wp1} params={wp1_params} shadow={false} scroll={true}/>
