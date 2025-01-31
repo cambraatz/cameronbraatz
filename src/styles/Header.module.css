@@ -10,7 +10,7 @@ header {
     z-index: 10;
     flex-direction: row;
     justify-content: space-between;
-    color: rgba(38, 54, 50, 1);
+    color: #263632;
     font: 600 10px/1.4 Inter, sans-serif;
 }
 

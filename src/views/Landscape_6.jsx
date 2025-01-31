@@ -23,7 +23,7 @@ const intro_params = {
 };
 const inspo_params = {
     header: null,
-    subheader: "community mapping",
+    subheader: "community demographic studies",
     color: null,
     body1: "arcgis was implemented to analyze demographics, trail/bike infrastructure, flood boundaries, among other datasets to gather insights on the community level.",
     body2: "the results of the regional analysis showed that the area of study divided neighborhoods both spatially and racially, bike infrastructure was seriously lacking extending east through the city, and there exists effective flood solutions that could reclaim otherwise unusable space south of the st louis arch",
@@ -34,7 +34,7 @@ const inspo_params = {
 };
 const summary_params = {
     header: null,
-    subheader: "informed regional design",
+    subheader: "community inventory + analysis",
     color: null,
     body1: "the plan view and aerial renderings below highlight and expand on the insights gathered from the regional analysis, anchoring the high-level information to human-scale landmarks.",
     body2: "from this perspective it is easy to see the high-potential for this area, should these popular attractions be tied with meaningful connections.",

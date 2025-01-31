@@ -6,15 +6,17 @@
   }
   
 .skills .blueBackground {
-    background-color: #CBDCF4;
-    box-shadow: 0 5px 5px rgba(37, 36, 36, 0.1);
+    /*background-color: #CBDCF4;*/
+    color: #263632;
+    /*box-shadow: 0 5px 5px rgba(37, 36, 36, 0.1);*/
     display: flex;
     align-items: center;
     padding: 20px 20px;
 }
 
 .skills .whiteBackground {
-    box-shadow: 0 5px 5px rgba(37, 36, 36, 0.1);
+    /*box-shadow: 0 5px 5px rgba(37, 36, 36, 0.1);*/
+    color: #263632;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -23,8 +25,9 @@
 }
 
 .skills .greenBackground {
-    background-color: #9FA69A;
-    color: white;
+    /*background-color: #9FA69A;
+    color: white;*/
+    color: #263632;
     display: flex;
     align-items: center;
     padding: 20px 20px;
@@ -80,5 +83,19 @@
         margin-block: 1.5em 0;
         text-align: start;
         justify-content: flex-start;
+    }
+
+    .skills .contentWrapper p,
+    .skills .contentWrapper h3,
+    .skills .contentWrapper h5 {
+        font-size: medium;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .skills .contentWrapper p,
+    .skills .contentWrapper h3,
+    .skills .contentWrapper h5 {
+        font-size: larger;
     }
 }

@@ -39,8 +39,8 @@ import Stripped from "../assets/artwork/StripLoaf.jpg";
 import styles from '../styles/PhotoFrame.module.css';
 
 const intro = {
-    header: "hobbies",
-    subheader: "academic and academic past times",
+    header: "art // hobbies",
+    subheader: "academic artwork and recreational past times",
     color: "#fffff",
     body1: "collection of recreational and academic woodworking, neon and glass fabrication, as well as a few pictures from my community garden plot and some of the best loaves of sourdough over the years.",
     body2: "this page will be kept up to date as subsequent garden seasons pass, passion projects are completed, and delicious loaves are baked. i am very passionate about all of my hobbies and are more than happy to talk your ear off, reach out if you are at all curious!",

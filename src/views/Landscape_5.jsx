@@ -14,7 +14,7 @@ import styles from '../styles/Portfolio.module.css';
 
 const intro_params = {
     header: "dane county trails",
-    subheader: "regional analysis and planning",
+    subheader: "regional analysis + planning",
     color: "#fffff",
     body1: "this project involved the design and development of standard bike infrastructure typologies for the greater madison area (wisconsin). our professor enlisted our help building a regional dataset tracking the pollinator suitability for a growing list of study areas, with each student surveying new zones in the county and compiling the results in a dataset for geographic analysis.",
     body2: "after compilation, arcgis was used to analyze the data and generate regional suitability maps. using the insights gathered in this research phase, we moved forward in macro-level regional planning and the development of design typologies. the latter were rendered using a combination of sketchup and photoshop.",
@@ -30,8 +30,8 @@ const inspo_params = {
     body2: "the two suggested trail master plans aim to connect the disparate pollinator habitats with a unified pollinator corridor that ensures safe passage and access to much needed resources.",
     body3: null,
     figure1: Fig2,
-    alt: "delivery manager figure 1.0",
-    caption: "user validation and landing page"
+    alt: "regional design figure 1.0",
+    caption: "pollinator suitability map"
 };
 
 const p0_params = {
@@ -39,17 +39,17 @@ const p0_params = {
     subheader: null,
     color: "#CBDCF4",
     figure1: Fig3,
-    alt: "delivery manager figure 1.0",
-    caption: "user validation and landing page"
+    alt: "regional design figure 1.1",
+    caption: "informed county concepts"
 };
 const p1_params = {
     header: null,
-    subheader: "informed regional design",
+    subheader: "design typologies",
     body1: "the rendered design typologies frame future development of regional bicycle infrastructure, with suggestions for native planting schemes and sustainable design principles.",
     body2: "conceptual renderings visualize the suggested bicycle trails across urban, road adjacent and riparian adjacent trail conditions.",
     figure1: Fig4,
-    alt: "delivery manager figure 1.0",
-    caption: "user validation and landing page"
+    alt: "delivery manager figure 1.2",
+    caption: "design typologies"
 };
 
 const Landscape_1 = () => {

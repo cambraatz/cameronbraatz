@@ -2,12 +2,14 @@
   width: 100%;
   height: auto;
   font-family: Inter, sans-serif;
-  color: #fff;
+  /*color: #fff;*/
+  color: #263632;
 }
 
 .intro .greenBackground {
-  background-color: #9fa69a;
-  box-shadow: 0 5px 5px rgba(37, 36, 36, 0.1);
+  /*background-color: #9fa69a;
+  box-shadow: 0 5px 5px rgba(37, 36, 36, 0.1);*/
+  color: #263632;
   display: flex;
   align-items: center;
   padding: 6%;
@@ -15,11 +17,13 @@
 
 .intro h3 {
   margin-block: 0;
+  color: #263632;
 }
 
 .intro p {
   margin-block: 0.5em 0;
   font-size: smaller;
+  color: #263632;
 }
 
 .intro div {
@@ -37,4 +41,50 @@
   width: 7em;
   max-width: 180px;
   border-radius: 50%;
+}
+
+@media screen and (min-width: 500px){
+  .intro p {
+    font-size: medium;
+  }
+
+  .intro img {
+    height: 12em;
+    width: 12em;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .intro .greenBackground {
+    padding: 3%;
+    width: 60%;
+  }
+
+  .intro p {
+    font-size: larger;
+  }
+
+  .intro div div {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1500px){
+  .intro .greenBackground {
+    padding: 3%;
+  }
+
+  .intro p {
+    font-size: larger;
+  }
+
+  .intro div div {
+    margin-left: 30px;
+  }
+
+  .intro img {
+    height: 20em;
+    width: 20em;
+    max-width: 20em;
+  }
 }

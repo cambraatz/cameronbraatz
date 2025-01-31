@@ -18,7 +18,7 @@ import styles from '../styles/Portfolio.module.css';
 
 const intro_params = {
     header: "regional park concepts",
-    subheader: "conceptual design and graphics",
+    subheader: "conceptual design + graphics",
     color: "#fffff",
     body1: "this project involved a set of preliminary design concepts as part of a feasibility study and investor look-book for a master-planned community in thornton, co. inspired by modern landscape design, natural playgrounds, and informal gathering spaces, two sets of concepts were developed for a large and a small neighborhood park.",
     body2: "both design sets draw from classic principles, such as strong linear sightlines, framing views, forced perspective, and formal structural plantings. the first concept juxtaposes hard geometry with long, sweeping curves, while the second fully embraces an angular design typology.",
