@@ -10,6 +10,12 @@
 
 .banner header:hover {
     color: #CBDCF4;
+    cursor: pointer;
+}
+
+h3:hover {
+    color: #CBDCF4;
+    cursor: pointer;
 }
 
 .announcement {
@@ -50,6 +56,16 @@
     margin-top: 7px;
 }
 
+svg {
+    fill: white;
+    stroke: #263632;
+}
+svg:hover {
+    stroke: #458ff8 !important;
+    fill: white;
+    cursor: pointer;
+}
+
 /*
 *
 * // website styling defaults to mobile platforms, alternative styling applied for desktop...
@@ -61,5 +77,21 @@
 
     .iconWrapper {
         gap: 15px;
+    }
+
+    h3 {
+        font-size: small;
+    }
+}
+
+@media screen and (min-width: 900px){
+    h3 {
+        font-size: medium;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    h3 {
+        font-size: large;
     }
 }

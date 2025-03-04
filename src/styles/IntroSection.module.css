@@ -18,11 +18,13 @@
 .intro h3 {
   margin-block: 0;
   color: #263632;
+  font-size: small;
+  pointer-events: none !important;
 }
 
 .intro p {
   margin-block: 0.5em 0;
-  font-size: smaller;
+  font-size: small;
   color: #263632;
 }
 
@@ -39,18 +41,18 @@
 .intro img {
   height: 7em;
   width: 7em;
-  max-width: 180px;
+  /*max-width: 180px;*/
   border-radius: 50%;
 }
 
 @media screen and (min-width: 500px){
-  .intro p {
-    font-size: medium;
+  .intro p, .intro h3 {
+    font-size: small;
   }
 
   .intro img {
-    height: 12em;
-    width: 12em;
+    height: 10em;
+    width: 10em;
   }
 }
 
@@ -60,12 +62,17 @@
     width: 60%;
   }
 
-  .intro p {
-    font-size: larger;
+  .intro p, .intro h3 {
+    font-size: medium;
   }
 
   .intro div div {
     margin-left: 30px;
+  }
+
+  .intro img {
+    height: 12em;
+    width: 12em;
   }
 }
 
@@ -74,8 +81,8 @@
     padding: 3%;
   }
 
-  .intro p {
-    font-size: larger;
+  .intro p, .intro h3 {
+    font-size: large;
   }
 
   .intro div div {

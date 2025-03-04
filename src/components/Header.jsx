@@ -2,7 +2,7 @@ import { React,useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import styles from '../styles/Header.module.css';
-import MenuLogo from '../assets/menu_logo.svg';
+import { ReactComponent as MenuLogo } from '../assets/menu_logo.svg';
 
 const Header = () => {
     const navigate = useNavigate();
@@ -86,13 +86,10 @@ const Header = () => {
                 </div>
             <div className={styles.header}>
                 <div id="click_header" className={styles.container}>
-                    <h2 onClick={handleHomeClick}>cameron braatz</h2>
-                    <img 
-                        src={MenuLogo}
-                        alt=""
+                    <a href="/"><h2 id={styles.name}>cameron braatz</h2></a>
+                    <MenuLogo
                         id="menu_icon"
                         className={styles.icon}           
-                        loading="lazy"
                         onClick={handleClick}
                     />
                 </div>

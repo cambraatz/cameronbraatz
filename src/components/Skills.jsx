@@ -60,6 +60,7 @@ const Skills = () => {
                 </p>
             </div>
         </div>
+        <a href="/CB_Resume.pdf" target="_blank" rel="noopener noreferrer" id="resume_link"><h5>[see resume for more]</h5></a>
     </section>
   );
 };

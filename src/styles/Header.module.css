@@ -30,8 +30,8 @@ header {
     object-fit: contain;
     object-position: center;
     width: 16px;
-    color: #CBDCF4;
     transition: 1s;
+    fill: #263632;
 }
 
 .popup {
@@ -76,9 +76,23 @@ a:hover {
 a:active {
     color: darkorchid;
 }
+.header h2 {
+    color: #263632;
+}
+
+.header h2:hover {
+    color: #458ff8;
+    cursor: pointer;
+}
 
 svg {
-    color: rgb(38,54,50,1);
+    stroke: #263632;
+    fill: white;
+}
+svg:hover {
+    stroke: #458ff8;
+    fill: white;
+    cursor: pointer;
 }
 
 /*

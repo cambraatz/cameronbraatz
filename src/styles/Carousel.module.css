@@ -6,6 +6,11 @@
     gap: 2%;
 }
 
+.carousel:hover {
+    color: #CBDCF4;
+    cursor: pointer;
+}
+
 .carousel div {
     display: flex;
     justify-content: center;
@@ -61,10 +66,42 @@
 
 @media screen and (min-width: 500px) {
     .carousel {
+        height: 20em;
+    }
+    .carousel img {
+        height: 20em;
+        overflow: hidden;
+    }
+
+    .carousel h5 {
+        font-size: smaller;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .carousel {
+        height: 30em;
+    }
+    .carousel img {
+        height: 30em;
+        overflow: hidden;
+    }
+
+    .carousel h5 {
+        font-size: medium;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    .carousel {
         height: 40em;
     }
     .carousel img {
         height: 40em;
         overflow: hidden;
+    }
+
+    .carousel h5 {
+        font-size: larger;
     }
 }

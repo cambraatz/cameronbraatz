@@ -2,14 +2,18 @@ import React from "react";
 import { useNavigate } from 'react-router-dom';
 import styles from '../styles/Footer.module.css';
 
-import Instagram from '../assets/Instagram.svg';
-import Linkedin from '../assets/Linkedin.svg';
-import Github from '../assets/Github.svg';
-import Gmail from '../assets/Mail.svg';
+import { ReactComponent as Instagram } from '../assets/Instagram.svg';
+import { ReactComponent as Linkedin } from '../assets/Linkedin.svg';
+import { ReactComponent as Github } from '../assets/Github.svg';
+import { ReactComponent as Gmail } from '../assets/Mail.svg';
 
-const Icon = ({ src, alt, className }) => (
+/*const Icon = ({ src, alt, className }) => (
     <img loading="lazy" src={src} alt={alt} className={className} />
-  );
+  );*/
+const Icon = ({ src, alt, className, style, ...props }) => {
+    const SvgIcon = src;
+    return <SvgIcon aria-label={alt} className={className} {...props} />;
+}
   
 const Footer = (props) => {
     const navigate = useNavigate();
@@ -100,7 +104,7 @@ const Footer = (props) => {
                         <a href={icon.url} target="_blank" rel="noreferrer noopener" key={index}><Icon id={icon.alt} src={icon.src} alt={icon.alt} className={styles.icon}/></a>
                     ))}
                 </div>
-                <a href="mailto:cameronbraatz@gmail.com" target="_blank" rel="noreferrer noopener"><Icon src={Gmail} alt="Last Icon" className={styles.lastIcon}/></a>
+                <a href="mailto:cameronbraatz@gmail.com" target="_blank" rel="noreferrer noopener"><Icon src={Gmail} alt="Last Icon" className={styles.lastIcon} /></a>
             </div>
         </section>
     );

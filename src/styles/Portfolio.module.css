@@ -9,6 +9,11 @@
     padding-top: 20%;
 }
 */
+
+h2:hover {
+    pointer-events: none !important;
+}
+
 .Portfolio img {
     max-width: 1900px;
 }
@@ -31,11 +36,16 @@
 .links h3 {
     margin-block: 0 1em;
 }
+.links h3:hover {
+    color: white;
+    cursor: default;
+}
 .links h5 {
-    margin-block: 0 0;
+    margin-block: 0 0.25em;
 }
 .links h5:hover {
     color:#CBDCF4;
+    cursor: pointer;
 }
 
 .module {
@@ -61,6 +71,7 @@
 }
 .modBlock h2 {
     margin-block: 0 0;
+    pointer-events: none !important;
 }
 .modBlock h5 {
     margin-block: 0.5em 0;
@@ -114,6 +125,33 @@
 
 /* Tablet and Desktop Styling */
 @media screen and (min-width: 500px){
+    .module {
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 5%;
+    }
+
+    .imgBlock {
+        max-width: 500px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .scrollBlock {
+        overflow: hidden;
+        padding: 0 5%;
+        max-height: 90vh;
+    }
+
+    .scrollBlock img {
+        max-width: 100%;
+        padding-top: 5%;
+    }
+}
+
+@media screen and (min-width: 900px){
     /*
     .blue_wrapper {
         background-color: #CBDCF4;
@@ -147,9 +185,6 @@
     .module {
         flex-direction: row;
         justify-content: space-between;
-        margin-right: auto;
-        margin-left: auto;
-        padding-top: 5%;
     }
 
     .imgmodule {

@@ -4,6 +4,7 @@ import Header from "../components/Header"
 import Footer from '../components/Footer';
 import PortfolioEntry from "../components/PortfolioEntry";
 import LinksArray from "../components/Links";
+import BizMap from "../components/BizMap";
 
 import LC_Overview from '../assets/compsci/landcover_overview.png';
 import LC_Data from '../assets/compsci/landcover_data.png';
@@ -154,6 +155,7 @@ const CompSci_0 = () => {
             <PortfolioEntry id={styles.lc7} className={styles.lc} params={LC7_params}/>
             <PortfolioEntry id={styles.lc8} className={styles.lc} params={LC8_params}/>
             <PortfolioEntry id={styles.lc9} className={styles.lc} params={LC9_params}/>
+            {/*<BizMap />*/}
             <span className="half_buffer"></span>
             <Footer page="/compsci/1" dest="rent to own"/>
         </>
