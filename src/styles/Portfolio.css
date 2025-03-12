@@ -26,7 +26,7 @@ h2:hover {
 .links {
     display: flex;
     flex-direction: column;
-    padding: 2em 5%;
+    padding: 2em 6%;
     color: rgb(95, 100, 90);
     background-color: rgb(204, 209, 200); 
 }
@@ -36,10 +36,7 @@ h2:hover {
 .links h3 {
     margin-block: 0 1em;
 }
-.links h3:hover {
-    color: white;
-    cursor: default;
-}
+
 .links h5 {
     margin-block: 0 0.25em;
 }
@@ -66,7 +63,7 @@ h2:hover {
 .modBlock {
     display: flex;
     flex-direction: column;
-    margin: 0 5%;
+    margin: 0 6%;
 
 }
 .modBlock h2 {
@@ -81,16 +78,16 @@ h2:hover {
 }
 
 .imgBlock {
-    padding: 5% 5% 0;
+    padding: 5% 6% 0;
     overflow: hidden;
 }
 
 .scrollBlock {
-    padding: 5% 5% 0;
+    padding: 5% 6% 0;
     overflow: scroll;
 }
 
-.figure {
+.portfolioFigure {
     height: auto;
     width: 100%;
     border-radius: 10px;
@@ -108,19 +105,118 @@ h2:hover {
     overflow: hidden;
 }
 
-#portfolioimg {
+.portfolioimg {
     height: auto;
     width: 200%;
 }
 
+.projectBanner {
+    width: 100%;
+    height: 400px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 0;
+}
+#dm_banner {
+    height: auto;
+}
+
+.scrollBlock {
+    height: 600px;
+}
+
+.scrollDiv {
+    width: 88%;
+    height: 500px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    margin: 5% 6% 0;
+}
+
+.bannerImage, .scrollImage {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
 #note {
-    margin: 5% 5% 0;
-    width: 90%;
+    margin: 5% 6% 0;
+    width: 88%;
     font-size: small;
 }
 
 #lc8 img, #lc6 img {
     border-radius: 0;
+}
+
+.arrayBlock {
+    margin: auto;
+}
+
+.arrayImage {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageArray {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    width: 100%;
+}
+
+.leftArrow, .rightArrow {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-block: 0;
+    margin-inline: 2% 0;
+}
+
+.leftArrow {
+    margin-inline: 1%;
+}
+
+.rightArrow {
+    margin-inline: 1%;
+}
+
+.leftArrow:hover, .rightArrow:hover {
+    cursor: pointer;
+    color:#255fb1;
+}
+
+.arrayBlock .caption {
+    margin-block: 10px 0;
+    margin-inline: 6%;
+    font-size: small;
+    font-weight: 400;
+    text-align: right;
+}
+
+.arrayBlock .caption strong {
+    font-weight: 600;
+}
+
+.imageSwitch {
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    object-fit: cover;
+}
+
+.arrayCaption {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 /* Tablet and Desktop Styling */
@@ -136,18 +232,44 @@ h2:hover {
         max-width: 500px;
         margin: auto;
     }
+
+    .arrayBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrayBlock {
+        max-width: 80%;
+    }
 }
 
 @media screen and (min-width: 700px){
     .scrollBlock {
         overflow: hidden;
-        padding: 0 5%;
+        padding: 0 6%;
         max-height: 90vh;
     }
 
     .scrollBlock img {
         max-width: 100%;
         padding-top: 5%;
+    }
+
+    .scrollDiv {
+        height: 600px;
+    }
+
+    .projectBanner {
+        width: 100%;
+    }
+
+    .arrayImage {
+        height: 400px;
+    }
+
+    .arrayBlock {
+        max-width: 80%;
     }
 }
 
@@ -175,7 +297,7 @@ h2:hover {
 
     .modBlock {
         display: flex;
-        margin: 0 5%;
+        margin: 0 6%;
         min-width: 40%;
     }
     .modBlock p {
@@ -198,7 +320,7 @@ h2:hover {
     .imgBlock {
         display: flex;
         justify-content: flex-end;
-        padding: 0 5%;
+        padding: 0 6%;
         width: 100%;
     }
 
@@ -208,7 +330,7 @@ h2:hover {
 
     .scrollBlock {
         overflow: hidden;
-        padding: 0 5%;
+        padding: 0 6%;
         max-height: 90vh;
     }
 
@@ -218,7 +340,7 @@ h2:hover {
         box-shadow: none;
     }
 
-    .figure {
+    .portfolioFigure {
         width: 100%;
         height: auto;
     }
@@ -286,5 +408,17 @@ h2:hover {
 
     #lc9 .imgBlock, #ip0 .imgBlock {
         display: block;
+    }
+
+    .scrollDiv {
+        width: 100%;
+    }
+
+    .projectBanner {
+        height: 500px;
+    }
+
+    .arrayBlock {
+        max-width: 750px;
     }
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import styles from '../styles/Portfolio.module.css';
+//import styles from '../styles/Portfolio.module.css';
+import '../styles/Portfolio.css';
 
 
 const LinksArray = (props) => {
@@ -50,7 +51,7 @@ const LinksArray = (props) => {
 
     if(props.page === "compsci"){
         return (
-            <div className={styles.links} onClick={handleClick}>
+            <div className="links" onClick={handleClick}>
                 <h3>projects:</h3>
                 <h5 id="deliverymanager">{`>>>`} delivery manager</h5>
                 <h5 id="landcover">{'>>>'} land cover segmentation</h5>
@@ -61,7 +62,7 @@ const LinksArray = (props) => {
     }
     else if (props.page === "landscape"){
         return (
-            <div className={styles.links} onClick={handleClick}>
+            <div className="links" onClick={handleClick}>
                 <h3>projects:</h3>
                 <h5 id="multifamily">{`>>>`} multi family residential</h5>
                 <h5 id="regionalpark">{`>>>`} regional park concepts</h5>

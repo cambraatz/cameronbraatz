@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
-import styles from '../styles/Footer.module.css';
+//import styles from '../styles/Footer.module.css';
+import '../styles/Footer.css';
 
 import { ReactComponent as Instagram } from '../assets/Instagram.svg';
 import { ReactComponent as Linkedin } from '../assets/Linkedin.svg';
@@ -64,28 +65,28 @@ const Footer = (props) => {
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case "/landscape/0":
-                navigate("/landscape/1")
+                navigate("/landscape/1");
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case "/landscape/1":
-                navigate("/landscape/2")
+                navigate("/landscape/2");
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case "/landscape/2":
                 //navigate("/")
-                navigate("/landscape/3")
+                navigate("/landscape/3");
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case "/landscape/3":
-                navigate("/landscape/4")
+                navigate("/landscape/4");
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case "/landscape/4":
-                navigate("/")
+                navigate("/");
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             case "/hobbies":
-                navigate("/")
+                navigate("/");
                 document.body.scrollTop = document.documentElement.scrollTop = 0;
                 break;
             default:
@@ -94,17 +95,17 @@ const Footer = (props) => {
     };
 
     return (
-        <section className={styles.banner}>
-            <div className={styles.announcement}>
+        <section className="footer">
+            <div className="announcement">
                 <h3 id="page_link" onClick={handleClick}>{prompt}</h3>
             </div>
-            <div className={styles.iconContainer}>
-                <div className={styles.iconWrapper}>
+            <div className="iconContainer">
+                <div className="iconWrapper">
                     {icons.map((icon, index) => (
-                        <a href={icon.url} target="_blank" rel="noreferrer noopener" key={index}><Icon id={icon.alt} src={icon.src} alt={icon.alt} className={styles.icon}/></a>
+                        <a href={icon.url} target="_blank" rel="noreferrer noopener" key={index}><Icon id={icon.alt} src={icon.src} alt={icon.alt} className="icon"/></a>
                     ))}
                 </div>
-                <a href="mailto:cameronbraatz@gmail.com" target="_blank" rel="noreferrer noopener"><Icon src={Gmail} alt="Last Icon" className={styles.lastIcon} /></a>
+                <a href="mailto:cameronbraatz@gmail.com" target="_blank" rel="noreferrer noopener"><Icon src={Gmail} alt="Last Icon" className="lastIcon" /></a>
             </div>
         </section>
     );

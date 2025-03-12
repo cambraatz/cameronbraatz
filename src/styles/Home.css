@@ -5,6 +5,8 @@
     height: auto;
     max-height: 750px;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner img {
@@ -13,6 +15,17 @@
     max-height: 70%;
     object-fit: cover;
     object-position: bottom;
+}
+
+@media screen and (min-width: 500px) {
+    .banner {
+        max-height: 1000px;
+    }
+
+    .banner img {
+        object-fit: cover;
+        object-position: 0 80%;
+    }
 }
 
 @media screen and (min-width: 1650px) {

@@ -1,24 +1,25 @@
 import {React, useState} from 'react';
-import styles from '../styles/Carousel.module.css';
+import '../styles/Carousel.css';
 
-const CarouselPanel = ({ src, alt, verbose, count }) => {
-    //const [verbose, setVerbose] = useState([false,false,false]);
-
-    const handleClick = (e) => {
-        const elmt = e.currentTarget
-        console.log("panel click: ",elmt)
-        //setVerbose(true)
-        //document.getElementById(elmt).style.transform = "scale(2,0)";
+const CarouselPanel = ({ count, src, alt }) => {
+    const panel = {
+        0: "left",
+        1: "center",
+        2: "right"
     };
 
-    const ident = "panel" + count;
+    const ident = "panel_" + panel[count];
+
+    var format = "skinny";
+    if (count === 1) {
+        format = "wide";
+    }
 
     return (
-        <figure id={ident} className={styles.figure}>
-            <img loading="lazy" src={src} alt={alt} className={styles.carouselImage} />
+        <figure id={ident} className={`figure panel ${format}`}>
+            <img loading="lazy" src={src} alt={alt} className="carouselImage" />
             <div>
                 <h5>{alt}</h5>
-                {/*<p id={"verbose" + count}>{verbose}</p>*/}
             </div>
         </figure>
     )

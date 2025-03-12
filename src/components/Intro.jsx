@@ -1,26 +1,25 @@
 import React from 'react';
-import styles from '../styles/IntroSection.module.css';
-import Headshot from '../assets/canoe.jpg';
+import '../styles/Intro.css';
+
+//import Headshot from '../assets/canoe.jpg';
+import Headshot from '../assets/Headshot.JPG';
 
 const IntroSection = () => {
   return (
-    <section className={styles.intro}>
-        <div className={styles.greenBackground}>
+    <section className="intro">
+        <div className="background">
             <img
                 loading="lazy"
                 src={Headshot}
-                className={styles.profileImage}
+                className="profileImage"
                 alt="Profile"
             />
-            <div className={styles.contentWrapper}>
-                <h3 className={styles.greeting}>hi!</h3>
-                <p className={styles.description}>
-                    my name is cameron braatz
-                </p>
-                <p className={styles.description}>
+            <div className="contentWrapper">
+                <h3 className="greeting">about me</h3>
+                <p className="description">
                     i'm a denver-based software engineer and landscape designer with over 6 years of professional design, development and management experience
                 </p>
-                <p className={styles.location}>
+                <p className="location">
                     this page serves as a collection of work from my professional + academic projects over my career
                 </p>
             </div>

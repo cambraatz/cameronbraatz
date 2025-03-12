@@ -4,7 +4,6 @@ import Header from "../components/Header"
 import Footer from '../components/Footer';
 import PortfolioEntry from "../components/PortfolioEntry";
 import LinksArray from "../components/Links";
-import DeliveryManager from "./DeliveryManager";
 
 import DM_Overview_0 from '../assets/compsci/DM_UI_02.png';
 import DM_Overview_1 from '../assets/compsci/DM_UI_01.png';
@@ -149,16 +148,55 @@ const DM9_params = {
     caption: "visual feedback"
 };
 
-const CompSci_0 = () => {
+/*
+const DM0_params = {
+    header: "delivery manager",
+    subheader: "trucking logistics",
+    color: "#fffff",
+    body1: "this robust mobile-friendly web application was developed for a trucking logistics company to streamline delivery tracking and driver log management, with a prominent client base including Home Depot.",
+    body2: "featuring a responsive react-based frontend (javaScript, css, html) that delivers an intuitive user experience, paired with a scalable .net backend (c#) for secure and efficient handling of database transactions.",
+    body3: "hosted on a linux/apache web server, this solution provides drivers with the ability to view, edit, and update their delivery records directly from their personal mobile devices",
+    figure1: DM_Overview_0,
+    figure2: null,
+    alt: null,
+    caption: "driver experience/workflow"
+};
+
+<div id={props.id} className="module">
+          <div className="modBlock">
+              <h2>{ params.header }</h2>
+              <h5>{ params.subheader }</h5>
+              <p>{ params.body1 }</p>
+              <p>{ params.body2 }</p>
+              <p>{ params.body3 }</p>
+          </div>
+          { figure1 }
+      </div>
+*/
+
+const DeliveryManager = () => {
     return (
         <>
-            {/*<Header/>
+            <Header/>
             <span className="buffer"></span>
-            <LinksArray page="compsci" />*/}
-            <DeliveryManager />
-            {/*
-            <hr></hr>
-            <PortfolioEntry id={styles.dm0} className={styles.dm} params={DM0_params} scroll={true}/>
+            <LinksArray page="compsci" />
+            <div id="dm0" className="module">
+                <div className="modBlock">
+                    <h2>delivery manager</h2>
+                    <h5>trucking logistics</h5>
+                    
+                    <p>this robust mobile-friendly web application was developed for a trucking logistics company to streamline delivery tracking and driver log management, with a prominent client base including home depot.</p>
+                    
+                    {/*<h5>ux/ui workflow</h5>*/}
+                    <p>featuring a responsive react-based frontend (javaScript, css, html) that delivers an intuitive user experience, paired with a scalable .net backend (c#) for secure and efficient handling of database transactions.</p>
+                    <p>hosted on a linux/apache web server, this solution provides drivers with the ability to view, edit, and update their delivery records directly from their personal mobile devices.</p>
+                    <p>note: this project is currently being redeveloped to a system of microservices, come back soon to see the progress</p>
+                    <div className="projectBanner" id="dm_banner">
+                        <img id="dm_uxui" className="noshadow" src={DM_Overview_0} alt="Delivery Manager UI/UX Workflow Diagram" loading="lazy"/>
+                    </div>
+                </div>
+            </div>
+            {/*<PortfolioEntry id={styles.dm0} className={styles.dm} params={DM0_params} scroll={true}/>*/}
             <PortfolioEntry id={styles.dm1} className={styles.dm} params={DM1_params}/>
             <PortfolioEntry id={styles.dm2} className={styles.dm} params={DM2_params}/>
             <PortfolioEntry id={styles.dm3} className={styles.dm} params={DM3_params}/>
@@ -168,11 +206,11 @@ const CompSci_0 = () => {
             <PortfolioEntry id={styles.dm7} className={styles.dm} params={DM7_params}/>
             <PortfolioEntry id={styles.dm8} className={styles.dm} params={DM8_params}/>
             <PortfolioEntry id={styles.dm9} className={styles.dm} params={DM9_params}/>
+
             <span className="half_buffer"></span>
             <Footer page="/compsci/0" dest="land cover segmentation"/>
-            */}
         </>
     );
 };
 
-export default CompSci_0;
+export default DeliveryManager;

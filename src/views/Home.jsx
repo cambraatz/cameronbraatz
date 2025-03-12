@@ -8,14 +8,14 @@ import Skills from '../components/Skills';
 import Footer from '../components/Footer';
 
 import Banner from '../assets/photo/mountain.jpg';
-import styles from '../styles/Homepage.module.css';
+import '../styles/Home.css';
 
 const Homepage = () => {
     return (
         <>
             <Header/>
             <span className="buffer"></span>
-            <div className={styles.banner}>
+            <div className="banner">
                 <img
                     className="banner_img"
                     loading="lazy"

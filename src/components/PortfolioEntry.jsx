@@ -1,11 +1,5 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import styles from '../styles/Portfolio.module.css';
-
-import Coding from '../assets/Coding.png';
-import Landscape from '../assets/Landscape_crop.jpg';
-import Neon from '../assets/Neon_crop.JPG';
+import '../styles/Portfolio.css';
 
 const PortfolioEntry = (props) => {
   /*
@@ -32,12 +26,12 @@ const PortfolioEntry = (props) => {
   //console.log(imgID);
   let figure1 = null;
   if(props.scroll === true){
-    figure1 = params.figure1 && shadow ? <div className={styles.scrollBlock}><img id={styles.portfolioimg} className={styles.figure} src={params.figure1} alt={params.alt} loading="lazy"/></div> : null;
-    figure1 = params.figure1 && !shadow ? <div className={styles.scrollBlock}><img id={styles.portfolioimg} className={styles.noshadow} src={params.figure1} alt={params.alt} loading="lazy"/></div> : figure1;
+    figure1 = params.figure1 && shadow ? <div className="scrollBlock"><img className="portfolioimg portfolioFigure" src={params.figure1} alt={params.alt} loading="lazy"/></div> : null;
+    figure1 = params.figure1 && !shadow ? <div className="scrollBlock"><img className="portfolioimg noshadow" src={params.figure1} alt={params.alt} loading="lazy"/></div> : figure1;
   }
   else {
-    figure1 = params.figure1 && shadow ? <div className={styles.imgBlock}><img className={styles.figure} src={params.figure1} alt={params.alt} loading="lazy"/></div> : null;
-    figure1 = params.figure1 && !shadow ? <div className={styles.imgBlock}><img className={styles.noshadow} src={params.figure1} alt={params.alt} loading="lazy"/></div> : figure1;
+    figure1 = params.figure1 && shadow ? <div className="imgBlock"><img className="portfolioFigure" src={params.figure1} alt={params.alt} loading="lazy"/></div> : null;
+    figure1 = params.figure1 && !shadow ? <div className="imgBlock"><img className="noshadow" src={params.figure1} alt={params.alt} loading="lazy"/></div> : figure1;
   }
   
   
@@ -48,15 +42,15 @@ const PortfolioEntry = (props) => {
   if(params.subheader === null){
     //document.getElementById(props.id).style.width = "50%";
     return(
-      <div id={props.id} className={ styles.imgmodule }>
+      <div id={props.id} className="imgmodule">
           { figure1 }
       </div>
     )
   };
 
   return (
-      <div id={props.id} className={ styles.module }>
-          <div className={ styles.modBlock }>
+      <div id={props.id} className="module">
+          <div className="modBlock">
               <h2>{ params.header }</h2>
               <h5>{ params.subheader }</h5>
               <p>{ params.body1 }</p>

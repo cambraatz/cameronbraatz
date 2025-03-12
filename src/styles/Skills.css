@@ -1,36 +1,35 @@
 .skills {
-    width: 100%;
+    padding: 10% 6% 10%;
+    width: 88%;
     height: auto;
     font-family: Inter, sans-serif;
     color: #263632;
-  }
-  
-.skills .blueBackground {
-    /*background-color: #CBDCF4;*/
-    color: #263632;
-    /*box-shadow: 0 5px 5px rgba(37, 36, 36, 0.1);*/
     display: flex;
-    align-items: center;
-    padding: 20px 6%;
+    flex-direction: column;
 }
 
-.skills .whiteBackground {
-    /*box-shadow: 0 5px 5px rgba(37, 36, 36, 0.1);*/
+.skillsSection {
     color: #263632;
     display: flex;
     align-items: center;
-    justify-content: end;
-    text-align: end;
-    padding: 20px 6%;
+    padding: 20px 0 0;
 }
 
-.skills .greenBackground {
-    /*background-color: #9FA69A;
-    color: white;*/
-    color: #263632;
-    display: flex;
-    align-items: center;
-    padding: 20px 6%;
+.skills .tail {
+    padding: 1.5em 0 0 0;
+}
+
+#skillsExperience {
+    padding: 0;
+}
+
+#skillsEducation {
+    width: 100%;
+    padding: 1.5em 0 0;
+}
+
+.skills .contentWrapper {
+    width: 100%;
 }
 
 .skills .contentWrapper h3 {
@@ -39,22 +38,18 @@
 }
 
 .skills .contentWrapper h5 {
-    margin-block: 0;
+    margin-block: 0 0.5em;
 }
 
 .skills .contentWrapper p {
-    margin-block: 0.5em 0;
+    margin-block: 0;
     line-height: 1.5em;
     font-size: smaller;
+    text-indent: -12px;
+    padding-left: 12px;
 }
 
-.skills .blueBackground section div div {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-}
-
-.skills .whiteBackground div div {
+.skillsSection div div {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
@@ -72,6 +67,18 @@
     cursor: pointer;
 }
 
+#resume_link h5 {
+    color: #263632;
+    margin-block: 1.5em 0;
+    margin-inline: 0;
+    font-size: 0.9em;
+}
+
+#resume_link h5:hover {
+    color: #255fb1;
+    cursor: pointer;
+}
+
 @media screen and (min-width: 500px) {
     .skills .contentWrapper p,
     .skills .contentWrapper h5 {
@@ -82,10 +89,17 @@
         font-size: medium;
     }
 
-    .skills .whiteBackground {
-        margin-block: 1.5em 0;
+    .whiteBackground {
         text-align: start;
         justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    #skillsExperience {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
@@ -102,25 +116,35 @@
     .skills {
         display: flex;
         justify-content: space-between;
-        background-color: #FFF;
     }
 
-    .skills .blueBackground,
-    .skills .whiteBackground,
-    .skills .greenBackground {
+    .skills .tail {
+        padding: 2.0em 0 0;
+    }
+
+    .skillsSection {
+        color: #263632;
         display: flex;
+        align-items: center;
+        padding: 20px 0 0;
+    }
+    .skillsSection {
         width: 30%;
         justify-content: flex-start;
         flex-direction: row;
         align-items: flex-start;
-        box-shadow: none;
-        background-color: #FFF;
         color:#263632;
-        padding: 3% 3% 5% 3%;
+        /*padding: 3% 3% 5% 3%;*/
+        margin-block: 2em 0;
+    }
+
+    #skillsExperience {
+        gap: 5%;
+        justify-content: flex-start;
     }
 }
 
-@media screen and (min-width: 1500px){
+@media screen and (min-width: 1200px){
     .skills .contentWrapper p,
     .skills .contentWrapper h5 {
         font-size: large;
@@ -128,5 +152,27 @@
 
     .skills .contentWrapper h3 {
         font-size: larger;
+    }
+
+    #skillsExperience {
+        width: 65%;
+    }
+
+    #skillsEducation {
+        width: 30%;
+        padding: 0;
+    }
+
+    .skills {
+        flex-direction: row;
+    }
+
+    .skills .tail {
+        /*padding: 20px 0 0 5%;*/
+        padding: 2.0em 0 0;
+    }
+
+    #resume_link h5 {
+        font-size: 1em;
     }
 }

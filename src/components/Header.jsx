@@ -1,7 +1,7 @@
 import { React,useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import styles from '../styles/Header.module.css';
+import '../styles/Header.css';
 import { ReactComponent as MenuLogo } from '../assets/menu_logo.svg';
 
 const Header = () => {
@@ -70,26 +70,26 @@ const Header = () => {
 
     return (
         <header>
-            <div id="menu_popup" className={styles.popup} onClick={handleMenuClick}>
-                    <div id="comp_sci" className={styles.menuItem}>
+            <div id="menu_popup" className="popup" onClick={handleMenuClick}>
+                    <div id="comp_sci" className="menuItem">
                         <p>computer science</p>
                     </div>
-                    <div id="landscape" className={styles.menuItem}>
+                    <div id="landscape" className="menuItem">
                         <p>landscape arch</p>
                     </div>
-                    <div id="hobbies" className={styles.menuItem}>
+                    <div id="hobbies" className="menuItem">
                         <p>hobbies</p>
                     </div>
-                    <div id="home" className={styles.menuItem}>
+                    <div id="home" className="menuItem">
                         <p>back to home</p>
                     </div>
                 </div>
-            <div className={styles.header}>
-                <div id="click_header" className={styles.container}>
-                    <a href="/"><h2 id={styles.name}>cameron braatz</h2></a>
+            <div className="header">
+                <div id="click_header" className="container">
+                    <a href="/"><h2 id="name">cameron braatz</h2></a>
                     <MenuLogo
                         id="menu_icon"
-                        className={styles.icon}           
+                        className="icon"           
                         onClick={handleClick}
                     />
                 </div>

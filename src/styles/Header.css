@@ -21,7 +21,7 @@ header {
     align-items: center;
     justify-content: space-between;
     /*padding: 31px 39px 5px;*/
-    padding: 5% 5% 0.5% 5%;
+    padding: 5% 6% 0;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -42,8 +42,7 @@ header {
 
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    margin: 0 2%;
-    border-radius: 0 0 10px 10px;
+    margin: 0 5%;
     display: none;
     flex-direction: column;
     transition: height,width 1s;
@@ -59,21 +58,20 @@ header {
 }
 .menuItem:hover {
     background-color:#CBDCF4;
-    border-radius: 10px;
 }
 
-a:link {
+.header a:link {
     color: white;
     text-decoration: none;
 }
-a:visited {
+.header a:visited {
     color: white;
     text-decoration: none;
 }
-a:hover {
+.header a:hover {
     color: #CBDCF4;
 }
-a:active {
+.header a:active {
     color: darkorchid;
 }
 .header h2 {
@@ -81,7 +79,7 @@ a:active {
 }
 
 .header h2:hover {
-    color: #458ff8;
+    color: #255fb1;
     cursor: pointer;
 }
 
@@ -90,7 +88,7 @@ svg {
     fill: white;
 }
 svg:hover {
-    stroke: #458ff8;
+    stroke: #255fb1;
     fill: white;
     cursor: pointer;
 }
@@ -104,7 +102,7 @@ svg:hover {
         height: 100px;
     }
     .header .container {
-        padding: 2.5% 2.5% 1% 2.5%;
+        padding: 2.5% 6% 1% 6%;
     }
 
     .header .container h2 {

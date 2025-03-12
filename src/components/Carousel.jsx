@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CarouselPanel from './CarouselPanel';
-import styles from '../styles/Carousel.module.css';
+import '../styles/Carousel.css';
 
-import Coding from '../assets/Coding.png';
-//import Landscape from '../assets/WeightedOverlay.PNG';
-import Landscape from '../assets/Landscape_crop.jpg';
-import Neon from '../assets/Neon_crop.JPG';
+import Coding from '../assets/compsci/compSciThumb1.png';
+//import Coding from '../assets/Coding.png';
+import Landscape from '../assets/CityGarden.jpg';
+//import Landscape from '../assets/Landscape_crop.jpg';
+//import Neon from '../assets/Neon_crop.JPG';
+import Neon from '../assets/artwork/Rainbow.JPG';
 
 const Carousel = () => {
   const navigate = useNavigate();
@@ -27,55 +29,66 @@ const Carousel = () => {
   ];
   
   const handleClick = (e) => {
-    // handle clicking between carousel panels...
-    if(e.target.id === "carousel"){
-      return
+    const carousel = document.getElementById("carousel");
+    //console.log("carousel: ", carousel); // carousel...
+    //console.log("e.target.parentElement: ", e.target.parentElement); // clicked panel...
+
+    if (!carousel.contains(e.target)) {
+      //console.log("Clicked outside carousel, resetting panels...")
+      for (let child of carousel.children) {
+        child.classList.add("default");
+        child.classList.remove("wide","skinny");
+      }
+      return;
     }
 
-    const elmt = e.target.parentNode.id
-    const carousel = e.target.parentNode.className
+    const panel = e.target.closest(".panel"); // grab nearest panel...
+    if (!panel) { 
+      console.log("no panel grabbed...")
+      return;
+    }
     
-    if(document.getElementById(elmt).status === "open"){
-      const path = document.getElementById(elmt).children[1].children[0].innerText;
+    // if panel is active, navigate to portfolio page...
+    if(panel.classList.contains("wide")){
+      const path = panel.querySelector("h5").innerText;
       switch(path){
         case "/comp_sci":
           navigate("/compsci/0");
-          document.body.scrollTop = document.documentElement.scrollTop = 0;
           break;
         case "/landscape":
           navigate("/landscape/0");
-          document.body.scrollTop = document.documentElement.scrollTop = 0;
           break;
           case "/hobbies":
             navigate("/hobbies");
-            document.body.scrollTop = document.documentElement.scrollTop = 0;
             break;
         default:
-          console.log(`Implement navigation to ${path} here...`);
-          for (let i=0; i < document.getElementsByClassName(carousel).length; i++){
-            //console.log("Carousel Loop: ",i)
-            document.getElementsByClassName(carousel)[i].style.width = "32%";
-            document.getElementsByClassName(carousel)[i].status = "closed";
-          }
+          break;
       }
-
-      
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
     } else {
-      for (let i=0; i < document.getElementsByClassName(carousel).length; i++){
-        //console.log("Carousel Loop: ",i)
-        document.getElementsByClassName(carousel)[i].style.width = "22%";
-        document.getElementsByClassName(carousel)[i].status = "closed";
+      for (let child of carousel.children) {
+        if (child === panel) {
+          child.classList.add("wide");
+          child.classList.remove("skinny", "default");
+        } else {
+          child.classList.add("skinny");
+          child.classList.remove("wide","default");
+        }
       }
-      
-      document.getElementById(elmt).style.width = "52%";
-      document.getElementById(elmt).status = "open"
     }
   };
 
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
+
   return(
-    <section id="carousel" className={styles.carousel} onClick={handleClick}>
+    <section id="carousel" className="carousel">
       {carouselImages.map((image, index) => (
-        <CarouselPanel key={index} src={image.src} alt={image.alt} count={image.idx}/>
+        <CarouselPanel key={index} count={index} src={image.src} alt={image.alt}/>
       ))}
     </section>
   )
