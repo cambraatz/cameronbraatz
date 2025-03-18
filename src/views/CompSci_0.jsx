@@ -4,7 +4,7 @@ import Header from "../components/Header"
 import Footer from '../components/Footer';
 import PortfolioEntry from "../components/PortfolioEntry";
 import LinksArray from "../components/Links";
-import DeliveryManager from "./DeliveryManager";
+import OperationsManager from "../components/OperationsManager";
 
 import DM_Overview_0 from '../assets/compsci/DM_UI_02.png';
 import DM_Overview_1 from '../assets/compsci/DM_UI_01.png';
@@ -155,7 +155,7 @@ const CompSci_0 = () => {
             {/*<Header/>
             <span className="buffer"></span>
             <LinksArray page="compsci" />*/}
-            <DeliveryManager />
+            <OperationsManager />
             {/*
             <hr></hr>
             <PortfolioEntry id={styles.dm0} className={styles.dm} params={DM0_params} scroll={true}/>

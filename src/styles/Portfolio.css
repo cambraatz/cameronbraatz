@@ -219,6 +219,75 @@ h2:hover {
     justify-content: flex-end;
 }
 
+.toggle-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto 0;
+    height: 500px;
+    width: 100%;
+    max-width: 1300px;
+    gap: 4%;
+}
+.toggle-elmt {
+    transition: 
+        height 0.5s ease-in,
+        width 0.5s ease-in;
+}
+.toggle-inactive {
+    width: 15%;
+    /*max-width: 325px;*/
+    height: 50%;
+}
+.toggle-active {
+    width: 50%;
+    /*max-width: 650px;*/
+    height: 100%;
+}
+.toggle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.module-selector-cont {
+    width: 100%;
+    margin: 5% 0 0;
+    border-bottom: 1px solid #263632;
+}
+.module-selector-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /*width: 88%;
+    margin: 0 6%;*/
+}
+.module-selector-text {
+    font-size: small;
+}
+.module-selector-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.module-selector-active {
+    color: #255fb1;
+    background-color:#CBDCF4;
+    font-weight: 600;
+}
+.module-selector-inactive {
+    color: #263632;
+    background-color: white;
+    font-weight: 500;
+}
+.module-selector-title:hover {
+    cursor: pointer;
+}
+
+#placeholder-text {
+    margin: 5% 6%;
+}
+
 /* Tablet and Desktop Styling */
 @media screen and (min-width: 500px){
     .module {
@@ -241,6 +310,10 @@ h2:hover {
 
     .arrayBlock {
         max-width: 80%;
+    }
+
+    .toggle-cont {
+        height: 500px;
     }
 }
 
@@ -270,6 +343,10 @@ h2:hover {
 
     .arrayBlock {
         max-width: 80%;
+    }
+
+    .toggle-cont {
+        height: 700px;
     }
 }
 
@@ -420,5 +497,9 @@ h2:hover {
 
     .arrayBlock {
         max-width: 750px;
+    }
+
+    .toggle-cont {
+        height: 900px;
     }
 }

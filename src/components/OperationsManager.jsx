@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
-import Header from "../components/Header"
-import Footer from '../components/Footer';
-import PortfolioEntry from "../components/PortfolioEntry";
-import LinksArray from "../components/Links";
+import Header from "./Header"
+import Footer from './Footer';
+import PortfolioEntry from "./PortfolioEntry";
+import LinksArray from "./Links";
+import ToggleArray from "./ToggleArray";
+
+import LoginPortal from "./LoginPortal";
+import DeliveryManager from "./DeliveryManager";
+import AdminPortal from "./AdminPortal";
+import WarehouseScanner from "./WarehouseScanner";
 
 import DM_Overview_0 from '../assets/compsci/DM_UI_02.png';
 import DM_Overview_1 from '../assets/compsci/DM_UI_01.png';
@@ -25,6 +31,7 @@ import Fig4 from '../assets/DriverApp_4.png';
 import Fig5 from '../assets/DriverApp_5.png';
 import Fig6 from '../assets/DriverApp_6.png';
 
+import '../styles/Portfolio.css';
 import styles from '../styles/Portfolio.module.css';
 
 const DM0_params = {
@@ -148,33 +155,31 @@ const DM9_params = {
     caption: "visual feedback"
 };
 
-/*
-const DM0_params = {
-    header: "delivery manager",
-    subheader: "trucking logistics",
-    color: "#fffff",
-    body1: "this robust mobile-friendly web application was developed for a trucking logistics company to streamline delivery tracking and driver log management, with a prominent client base including Home Depot.",
-    body2: "featuring a responsive react-based frontend (javaScript, css, html) that delivers an intuitive user experience, paired with a scalable .net backend (c#) for secure and efficient handling of database transactions.",
-    body3: "hosted on a linux/apache web server, this solution provides drivers with the ability to view, edit, and update their delivery records directly from their personal mobile devices",
-    figure1: DM_Overview_0,
-    figure2: null,
-    alt: null,
-    caption: "driver experience/workflow"
-};
+const OperationsManager = () => {
+    const [loginImages,setLoginImages] = useState({
+        content: [DA_login_0,DA_login_3,DA_login_4],
+        captions: ["login credentials","delivery verification","delivery manifest"]
+    });
 
-<div id={props.id} className="module">
-          <div className="modBlock">
-              <h2>{ params.header }</h2>
-              <h5>{ params.subheader }</h5>
-              <p>{ params.body1 }</p>
-              <p>{ params.body2 }</p>
-              <p>{ params.body3 }</p>
-          </div>
-          { figure1 }
-      </div>
-*/
+    const [activeModule,setActiveModule] = useState("login portal");
 
-const DeliveryManager = () => {
+    const toggleModule = (e) => {
+        const target = e.target.closest(".module-selector-title");
+        const modules = target.parentElement.children;
+
+        for (var i = 0; i < modules.length; i++) {
+            if (modules[i].id === target.id) {
+                setActiveModule(target.children[0].innerHTML);
+                modules[i].classList.remove("module-selector-inactive");
+                modules[i].classList.add("module-selector-active");
+            } else {
+                modules[i].classList.remove("module-selector-active");
+                modules[i].classList.add("module-selector-inactive");
+            }
+        };
+        
+    };
+
     return (
         <>
             <Header/>
@@ -182,10 +187,10 @@ const DeliveryManager = () => {
             <LinksArray page="compsci" />
             <div id="dm0" className="module">
                 <div className="modBlock">
-                    <h2>delivery manager</h2>
-                    <h5>trucking logistics</h5>
+                    <h2>operations manager</h2>
+                    <h5>trucking logistics software</h5>
                     
-                    <p>this robust mobile-friendly web application was developed for a trucking logistics company to streamline delivery tracking and driver log management, with a prominent client base including home depot.</p>
+                    <p>this robust suite of mobile-friendly web applications was developed for a trucking logistics company to streamline delivery tracking and driver log management, with a prominent client base including home depot.</p>
                     
                     {/*<h5>ux/ui workflow</h5>*/}
                     <p>featuring a responsive react-based frontend (javaScript, css, html) that delivers an intuitive user experience, paired with a scalable .net backend (c#) for secure and efficient handling of database transactions.</p>
@@ -196,16 +201,40 @@ const DeliveryManager = () => {
                     </div>
                 </div>
             </div>
-            {/*<PortfolioEntry id={styles.dm0} className={styles.dm} params={DM0_params} scroll={true}/>*/}
-            <PortfolioEntry id={styles.dm1} className={styles.dm} params={DM1_params}/>
-            <PortfolioEntry id={styles.dm2} className={styles.dm} params={DM2_params}/>
-            <PortfolioEntry id={styles.dm3} className={styles.dm} params={DM3_params}/>
-            <PortfolioEntry id={styles.dm4} className={styles.dm} params={DM4_params}/>
-            <PortfolioEntry id={styles.dm5} className={styles.dm} params={DM5_params} scroll={true}/>
-            <PortfolioEntry id={styles.dm6} className={styles.dm} params={DM6_params} scroll={true}/>
-            <PortfolioEntry id={styles.dm7} className={styles.dm} params={DM7_params}/>
-            <PortfolioEntry id={styles.dm8} className={styles.dm} params={DM8_params}/>
-            <PortfolioEntry id={styles.dm9} className={styles.dm} params={DM9_params}/>
+
+            <div className="module-selector-cont" onClick={toggleModule}>
+                <div className="module-selector-header">
+                    <div id="module-selector-lp" className="module-selector-title start module-selector-active">
+                        <p className="module-selector-text">login portal</p>
+                    </div>
+                    <div id="module-selector-ap" className="module-selector-title module-selector-inactive">
+                        <p className="module-selector-text">admin portal</p>
+                    </div>
+                    <div id="module-selector-dm" className="module-selector-title module-selector-inactive">
+                        <p className="module-selector-text">delivery manager</p>
+                    </div>
+                    <div id="module-selector-ws" className="module-selector-title end module-selector-inactive">
+                        <p className="module-selector-text">warehouse scanner</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            {/*<div id="dm1" className="module">
+                <div className="modBlock">
+                    <h5>login portal</h5>
+                    <p>the login portal serves as a secure entry point for both drivers and administrative users, providing tailored access to delivery and management tools.</p>
+                    <p>utilizing username and password credentials, the portal ensures that only authorized users gain access.</p>
+                    <p>successful login initiates a time-based token verification process, safeguarding all subsequent api requests and sensitive resources.</p>
+                </div>
+            </div>
+
+            <ToggleArray images={loginImages} defaultIndex={0}/>*/}
+
+            {activeModule === "login portal" && <LoginPortal />}
+            {activeModule === "admin portal" && <AdminPortal />}
+            {activeModule === "delivery manager" && <DeliveryManager />}
+            {activeModule === "warehouse scanner" && <WarehouseScanner />}
 
             <span className="half_buffer"></span>
             <Footer page="/compsci/0" dest="land cover segmentation"/>
@@ -213,4 +242,4 @@ const DeliveryManager = () => {
     );
 };
 
-export default DeliveryManager;
+export default OperationsManager;
